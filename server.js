@@ -12,6 +12,11 @@ const pool = new Pool({
     ssl: { rejectUnauthorized: false }
 });
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Travel API');
+});
+
+
 app.use(cors());
 app.use(bodyParser.json());
 
